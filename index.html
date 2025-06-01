@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/Images/calculator.png" type="image/png">
+</head>
+<body>
+    <div id="container">
+        <div id="mode">
+            <button id="dark-mode"><img src="/Images/dark-mode.png"></button>
+            <button id="light-mode"><img src="/Images/light-mode.png"></button>
+        </div>
+        <div id="calculator">
+            <div id="hero">
+                <input id="monitor" type="text" readonly>
+            </div>
+            <div id="main">
+                <button class="btn-clear" onclick="clearMonitor()">Ac</button>
+                <button class="btn-clear" onclick="deleteLast()">Del</button>
+                <button class="btns btn-operations">/</button>
+                <button class="btns btn-operations">*</button>
+                <button class="btns btn-nums" value="7">7</button>
+                <button class="btns btn-nums">8</button>
+                <button class="btns btn-nums">9</button>
+                <button class="btns btn-operations">-</button>
+                <button class="btns btn-nums">4</button>
+                <button class="btns btn-nums">5</button>
+                <button class="btns btn-nums">6</button>
+                <button class="btns btn-operations">+</button>
+                <button class="btns btn-nums">1</button>
+                <button class="btns btn-nums">2</button>
+                <button class="btns btn-nums">3</button>
+                <button class="btns btn-nums">0</button>
+                <button class="btns btn-nums">.</button>
+                <button class="btn-equation" onclick="calculate()">=</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+</html>

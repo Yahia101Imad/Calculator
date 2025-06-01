@@ -1,0 +1,136 @@
+:root {
+    --bg-container: #ffffff;
+    --bg-calculator-light: linear-gradient(135deg, #7cc5f9, #55b0fb, #68bcf8);
+    --bg-calculator-dark: linear-gradient(70deg, #1f1a48, #021528);
+
+    --bg-input: rgba(226, 242, 251, 0);
+    --clr-input-light: #3e3e3e;
+    --clr-input-dark: #ffffff;
+
+    --bg-btn-clear-light: #c7e2f7;
+    --bg-btn-operation-light: #98c4e7;
+    --bg-btn-nums-light: #b9d4e6;
+    --bg-btn-clear-dark: #5f6160;
+    --bg-btn-operation-dark: #025bad;
+    --bg-btn-nums-dark: #2b2f3a;
+
+    --clr-btn-clear-light: #83b6d5;
+    --clr-btn-operation-light: #568cbb;
+    --clr-btn-nums-light: #f7f8fd;
+    --clr-btn-clear-dark: #f7f8fd;
+    --clr-btn-operation-dark: #4fa8fa;
+    --clr-btn-nums-dark: #3997ee;
+
+    --bg-btn-equation: #3997ee;
+    --clr-btn-equation: #f7f8fd;
+
+    --fs-small: 20px;
+    --fs-big: 40px;
+
+    --fw: 600;
+
+    --ff-calculator: "Roboto Mono", monospace;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--ff-calculator);
+}
+
+#mode{
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 20px;
+}
+
+img {
+    width: 30px;
+}
+
+#light-mode {
+    display: none;
+}
+
+#mode button {
+    background: var(--bg-input);
+}
+#container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-container);
+}
+
+#calculator {
+    width: 300px;
+    height: 600px;
+    background: var(--bg-calculator-light);
+    padding: 2%;
+    border-radius: 20px;
+    box-shadow: 10px 14px 12px rgba(0, 0, 0, 0.2);
+}
+
+#hero {
+    width: 100%;
+    height: 40%;
+}
+
+input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: var(--bg-input);
+    color: var(--clr-input-light);
+    font-size: var(--fs-big);
+    font-weight: var(--fw);
+}
+
+#main {
+    width: 100%;
+    height: 60%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+}
+
+#main button:nth-child(12) {
+    grid-row: auto / 2 span;
+}
+
+#main button:nth-child(18) {
+    grid-column: auto / 2 span;
+}
+
+button {
+    border: none;
+    border-radius: 15px;
+    font-size: var(--fs-small);
+    font-weight: var(--fw);
+    cursor: pointer;
+}
+
+.btn-nums {
+    background: var(--bg-btn-nums-light);
+    color: var(--clr-btn-nums-light);
+}
+
+.btn-clear {
+    background: var(--bg-btn-clear-light);
+    color: var(--clr-btn-clear-light)
+}
+
+.btn-operations {
+    background: var(--bg-btn-operation-light);
+    color: var(--clr-btn-operation-light);
+}
+
+.btn-equation {
+    background: var(--bg-btn-equation);
+    color: var(--clr-btn-equation);
+}
